@@ -1,0 +1,6 @@
+name: formation_env
+channels:
+  - defaults
+dependencies:
+  - python=3.13
+prefix: C:\Users\GabrielPETER\miniconda3\envs\formation_env
