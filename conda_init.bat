@@ -1,4 +1,5 @@
 @echo off
+CALL C:\Users\%USERNAME%\anaconda3\Scripts\activate.bat
 :: ==============================================
 ::  Conda Environment Management Script
 :: ==============================================
