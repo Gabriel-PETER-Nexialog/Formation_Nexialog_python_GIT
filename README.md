@@ -180,16 +180,16 @@ behave --version
 ## 🗺️ Structure de la formation
 
 La formation est organisée **de branche en branche**. Chaque branche correspond à un module indépendant que vous explorez dans l'ordre.
+Le format est volontairement **court et direct** pour tenir sur une journée.
 ```
 main
 └── module/00-introduction          ← Point de départ
-    └── module/01-solid             ← Principes SOLID
-        └── module/02-dry-yagni     ← DRY & YAGNI
-            └── module/03-patterns  ← Design Patterns
-                └── module/04-tests ← Architecture des tests
-                    └── module/05-tdd    ← TDD
-                            └── module/06-git-basics  ← Git fondamentaux
-                                └── module/07-git-advanced ← Git avancé
+    └── module/01-git-basics         ← Git fondamentaux
+        └── module/02-solid          ← Principes SOLID
+            └── module/03-dry-yagni  ← DRY & YAGNI
+                └── module/04-patterns ← Design Patterns
+                    └── module/05-tests-tdd ← Tests + TDD (workflow)
+                        └── module/06-git-advanced ← Git avancé
                                   
 ```
 
@@ -201,10 +201,10 @@ Pour passer au module suivant :
 git branch -a | grep module/
 
 # Aller sur le premier module
-git checkout module/00-introduction
+git switch module/00-introduction
 
 # Passer au module suivant
-git checkout module/01-solid
+git switch module/01-git-basics
 ```
 
 Chaque branche contient :
