@@ -9,6 +9,6 @@ def greet(name: str) -> str:
 
     Règles :
     - si le nom est vide ou composé uniquement d'espaces, retourner "Bonjour !"
-    - sinon, retourner "Bonjour, <nom>!"
+    - sinon, retourner "Bonjour, <nom> !"
     """
     raise NotImplementedError("À compléter dans le module 00")
