@@ -50,11 +50,11 @@ Ouvrez `src/intro.py` et complétez la fonction `greet` selon la spécification 
 - Entrée : un nom (string)
 - Sortie : une phrase de salutation
 - Règles :
-  - Si le nom est vide ou compose uniquement d'espaces, retourner `"Bonjour !"`
-  - Sinon, retourner `"Bonjour, <nom>!"`
+- Si le nom est vide ou compose uniquement d'espaces, retourner `"Bonjour !"`
+- Sinon, retourner `"Bonjour, <nom> !"`
 
 Exemples :
-- `greet("Ada")` -> `"Bonjour, Ada!"`
+- `greet("Ada")` -> `"Bonjour, Ada !"`
 - `greet("  ")` -> `"Bonjour !"`
 
 ### 3) Comprendre le script d'exécution
