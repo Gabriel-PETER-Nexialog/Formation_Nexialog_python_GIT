@@ -33,9 +33,9 @@ Exemple :
 - Git permet de collaborer
 ```
 
-Vérifiez l'état :
+Vérifiez l'état de votre dépôt :
 ```bash
-git status -sb
+git status
 ```
 
 ### 2) Premier commit
@@ -50,13 +50,13 @@ git commit -m "docs: add git notes"
 Ajoutez les 2 lignes suivantes à `notes/git.md` :
 
 ```md
-- git status : affiche l'etat du depot
-- git log --oneline : affiche l'historique court
+- `git status` : affiche l'etat du depot
+- `git log --oneline` : affiche l'historique court
 ```
 
 Vérifiez :
 ```bash
-git status -sb
+git status
 git diff
 ```
 
@@ -77,7 +77,7 @@ git log --oneline -n 5
 
 ## Validation
 
-- `git status -sb` doit être propre
+- `git status` doit être propre
 - Le fichier `notes/git.md` contient au moins 5 lignes
 - L'historique affiche 2 commits successifs
 
