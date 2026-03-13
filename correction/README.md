@@ -1,5 +1,5 @@
-# Correction - Module 00
+# Correction - Module 01
 
-Le fichier `intro.py` contient une solution de référence pour l'exercice.
+Ce module n'a pas de correction : l'objectif est de pratiquer le flux Git.
 
-Rappel : essayez d'abord l'exercice avant de consulter cette correction.
+Les corrections des modules précédents peuvent aussi être présentes dans ce dossier.
