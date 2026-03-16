@@ -247,7 +247,7 @@ print(config_a is config_b)             # True
 
 ### 1) Design pattern Builder
 
-#### a) Exercice 1 : Construction d'un contrat auto (facile)
+#### a) Exercice 1 : Construction d'un contrat auto 
 
 **Problème** :
 On souhaite construire des objets `ContratAuto` qui ont plusieurs attributs optionnels (formule, franchise, options d'assistance). Le Builder est quasiment complet, mais il manque deux méthodes.
@@ -322,7 +322,7 @@ if __name__ == "__main__":
     # Franchise : 500€ — Options : ['assistance 0km', 'bris de glace']
 ```
 
-#### b) Exercice 2 : Construction d'une offre habitation (moyen)
+#### b) Exercice 2 : Construction d'une offre habitation 
 
 **Problème** :
 On souhaite construire des objets `OffreHabitation` avec un Builder. La classe `OffreHabitation` est donnée, ainsi que la structure du Builder avec les signatures de méthodes. Il faut implémenter le corps de chaque méthode du Builder.
@@ -414,7 +414,7 @@ if __name__ == "__main__":
     # Prime : 386.75€/an — Garanties : ['dégât des eaux', 'vol']
 ```
 
-#### c) Exercice 3 : Construction d'un devis santé (difficile)
+#### c) Exercice 3 : Construction d'un devis santé 
 
 **Problème** :
 On souhaite construire des objets `DevisSante` qui représentent un devis d'assurance santé avec : nom de l'assuré, âge, niveau de couverture (`base`, `confort`, `premium`), liste de bénéficiaires, plafond annuel et taux de remboursement.
@@ -474,7 +474,7 @@ if __name__ == "__main__":
 
 ### 2) Factory
 
-#### a) Exercice 1 : Création de contrats par type (facile)
+#### a) Exercice 1 : Création de contrats par type 
 
 **Problème** :
 On souhaite créer des contrats d'assurance via une Factory. La Factory et deux types de contrats (auto, habitation) sont déjà implémentés. Il manque le type `ContratSante`.
@@ -554,7 +554,7 @@ if __name__ == "__main__":
     # Contrat Santé — 45 ans — Prime : 540.00€
 ```
 
-#### b) Exercice 2 : Création de notifications par canal (moyen)
+#### b) Exercice 2 : Création de notifications par canal 
 
 **Problème** :
 Le service de notification doit envoyer des messages aux assurés via différents canaux (email, SMS, courrier). On souhaite utiliser une Factory pour créer le bon canal de notification. La classe abstraite `Notification` et la Factory sont données. Il faut implémenter les trois classes concrètes.
@@ -619,7 +619,7 @@ if __name__ == "__main__":
     # COURRIER à 12 rue de Paris, 75001 : Votre sinistre a été traité.
 ```
 
-#### c) Exercice 3 : Création de calculateurs de remise (difficile)
+#### c) Exercice 3 : Création de calculateurs de remise 
 
 **Problème** :
 Le service commercial applique des remises selon le profil du client : fidélité (ancienneté >= 5 ans → 10%), multi-contrats (>= 3 contrats → 8%), ou parrainage (a parrainé → 5%). On souhaite créer les calculateurs de remise via une Factory.
@@ -675,7 +675,7 @@ if __name__ == "__main__":
 
 ### 3) Singleton
 
-#### a) Exercice 1 : Configuration globale (facile)
+#### a) Exercice 1 : Configuration globale 
 
 **Problème** :
 L'application d'assurance a besoin d'une configuration globale unique (franchise par défaut, taux de TVA, etc.). Le Singleton est quasiment complet, mais la méthode `__new__` est incomplète.
@@ -719,7 +719,7 @@ if __name__ == "__main__":
     print(config1 is config2)               # True
 ```
 
-#### b) Exercice 2 : Registre central des contrats (moyen)
+#### b) Exercice 2 : Registre central des contrats 
 
 **Problème** :
 On souhaite un registre central qui stocke tous les contrats de l'application. Ce registre doit être un Singleton pour garantir une source de vérité unique. La structure de la classe est donnée, il faut implémenter le Singleton et les méthodes.
@@ -775,7 +775,7 @@ if __name__ == "__main__":
     print(registre1.trouver("S-001"))       # {'type': 'sante', 'prime': 540}
 ```
 
-#### c) Exercice 3 : Gestionnaire de connexion unique (difficile)
+#### c) Exercice 3 : Gestionnaire de connexion unique 
 
 **Problème** :
 L'application doit se connecter à un service externe de tarification via une API. Pour éviter de créer plusieurs connexions coûteuses, on souhaite un Singleton qui gère cette connexion unique. Le Singleton doit stocker l'URL de l'API, un jeton d'authentification, et un compteur de requêtes effectuées.
