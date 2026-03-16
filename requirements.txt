@@ -2,3 +2,5 @@ pytest
 unittest2
 pandas
 numpy
+sms_gateway
+sendgrid
