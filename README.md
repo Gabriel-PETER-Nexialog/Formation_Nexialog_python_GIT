@@ -94,7 +94,7 @@ plus de tests à écrire, et souvent des abstractions qui ne correspondent pas a
 Voici un exemple :
 
 ```python
-# ❌ Violation YAGNI — on anticipe des besoins qui n'existent pas
+# Violation YAGNI — on anticipe des besoins qui n'existent pas
 class ServiceNotification:
     def envoyer_email(self, destinataire, message):
         smtp.send(destinataire, message)
@@ -113,7 +113,7 @@ class ServiceNotification:
 ```
 Application du principe :
 ```python
-# ✅ On n'implémente que ce qui est utilisé aujourd'hui
+#  On n'implémente que ce qui est utilisé aujourd'hui
 class ServiceNotification:
     def envoyer_email(self, destinataire, message):
         smtp.send(destinataire, message)
