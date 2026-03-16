@@ -1,6 +1,6 @@
-# Module 02 - Principe SOLID
+# Module 03 - Principe DRY et YAGNI
 
-Objectif : apprendre les principes SOLID afin d'améliorer la qualité de code .
+Objectif : apprendre les principes DRY et YAGNI afin d'améliorer la qualité de code .
 
 ---
 
