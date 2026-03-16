@@ -5,7 +5,7 @@
 
 ---
 
-## 📋 Table des matières
+##  Table des matières
 
 - [Bienvenue](#-bienvenue)
 - [Contenu de la formation](#-contenu-de-la-formation)
@@ -15,7 +15,7 @@
 
 ---
 
-## 👋 Bienvenue
+##  Bienvenue
 
 Cette formation a été conçue pour vous donner les outils concrets pour écrire un code **propre, maintenable et testable**, tout en collaborant efficacement grâce à **Git**.
 
@@ -27,9 +27,9 @@ Vous apprendrez à :
 
 ---
 
-## 📚 Contenu de la formation
+##  Contenu de la formation
 
-### 🏗️ Bonnes pratiques de développement Python
+###  Bonnes pratiques de développement Python
 
 #### Principes fondamentaux
 | Principe           | Description                                                                             |
@@ -37,17 +37,16 @@ Vous apprendrez à :
 | **SOLID**          | Single Responsibility, Open/Closed, Liskov, Interface Segregation, Dependency Inversion |
 | **DRY**            | *Don't Repeat Yourself* — éviter la duplication de logique                              |
 | **YAGNI**          | *You Aren't Gonna Need It* — ne pas sur-concevoir                                       |
-| **KISS**           | *Keep It Simple, Stupid* — Privilégiez des solutions simples et lisibles                |
-| **Tell,Don't Ask** | *Tell,Don't Ask* — rendre responsable les objets de leur propre logique                 |
+
 
 #### Design Patterns
-- 🔒 **Singleton** — instance unique partagée
-- 🏭 **Factory** — création d'objets découplée
-- 🔨 **Builder** — construction d'objets complexes étape par étape
+-  **Singleton** — instance unique partagée
+-  **Factory** — création d'objets découplée
+-  **Builder** — construction d'objets complexes étape par étape
 -    **Documentaiton** —  *Catalog Desing Pattern* : https://refactoring.guru/design-patterns/python 
 ---
 
-### 🧪 Architecture des tests
+###  Architecture des tests
 
 | Type | Approche | Outil principal |
 |------|----------|-----------------|
@@ -69,7 +68,7 @@ tests/
 
 ---
 
-### 🌿 Git — Utilisation & Bonnes pratiques
+###  Git — Utilisation & Bonnes pratiques
 
 #### Commandes essentielles couvertes
 ```bash
@@ -88,8 +87,8 @@ git log          # Consulter l'historique
 
 #### Stratégie de branches
 ```
-main / master   ← 🔒 Protégée — production stable
-dev             ← 🔒 Protégée — intégration continue
+main / master   ←  Protégée — production stable
+dev             ←  Protégée — intégration continue
 feature/xxx     ← Développement de fonctionnalités
 fix/xxx         ← Corrections de bugs
 hotfix/xxx      ← Correctifs urgents en production
@@ -114,17 +113,20 @@ fix: resolve infinite loop in factory builder
 test: add unit tests for DRY principle module
 ```
 
+pour plus de détails visiter ce site : [**git-cheat-sheet**](https://git-scm.com/cheat-sheet)
+
 ---
 
-## 🚀 Getting Started
+
+##  Getting Started
 
 ### Prérequis
 
 Avant de commencer, assurez-vous d'avoir installé :
 
-- ✅ [**Anaconda**](https://www.anaconda.com/download) (dernière version)
-- ✅ [**Git**](https://git-scm.com/downloads) (2.x ou supérieur)
-- ✅ Un terminal (PowerShell, bash ou le terminal Anaconda)
+-  [**Anaconda**](https://www.anaconda.com/download) (dernière version)
+-  [**Git**](https://git-scm.com/downloads) (2.x ou supérieur)
+-  Un terminal (PowerShell, bash ou le terminal Anaconda)
 
 Vérifiez vos installations :
 ```bash
@@ -134,7 +136,7 @@ git --version
 
 ---
 
-### ⚙️ Installation de l'environnement
+### Installation de l'environnement
 
 **1. Clonez le dépôt de la formation**
 ```bash
@@ -144,22 +146,22 @@ cd formation-python-git
 
 **2. Lancez le script d'initialisation**
 
-> 🪟 **Windows** — Double-cliquez sur le fichier ou exécutez dans un terminal :
+>  **Windows** — Double-cliquez sur le fichier ou exécutez dans un terminal :
 ```bash
 conda_init.bat
 ```
 
-> 🐧 **Linux / macOS**
+> **Linux / macOS**
 ```bash
 bash conda_init.sh
 ```
 
 
->📦 Dans l'invite de commande mettez le noms de l'environnement conda `formation_env` puis choissiez la version de python **Python 3.13**
+> Dans l'invite de commande mettez le noms de l'environnement conda `formation_env` puis choissiez la version de python **Python 3.13**
 
 Le script va automatiquement :
-- 📥 Installer toutes les dépendances nécessaires (`pytest`, `behave`, etc.)
-- ✅ Vérifier que l'environnement est prêt
+- Installer toutes les dépendances nécessaires (`pytest`, `behave`, etc.)
+- Vérifier que l'environnement est prêt
 
 > ⚠️ **Important** : Vous devez nommer votre environnement **`formation_env`** — le script le vérifie automatiquement.
 
@@ -177,7 +179,7 @@ behave --version
 
 ---
 
-## 🗺️ Structure de la formation
+##  Structure de la formation
 
 La formation est organisée **de branche en branche**. Chaque branche correspond à un module indépendant que vous explorez dans l'ordre.
 Le format est volontairement **court et direct** pour tenir sur une journée.
@@ -198,7 +200,7 @@ main
 Pour passer au module suivant :
 ```bash
 # Voir tous les modules disponibles
-git branch -a | grep module/
+git branch 
 
 # Aller sur le premier module
 git switch module/00-introduction
@@ -208,21 +210,21 @@ git switch module/01-git-basics
 ```
 
 Chaque branche contient :
-- 📖 Un `README.md` dédié avec les objectifs et les consignes
-- 🧩 Des exercices à compléter
-- ✅ Une correction dans un sous-dossier `correction/`
+-  Un `README.md` dédié avec l'explication de la théorie, les objectifs et les consignes
+-  Des exercices à compléter
+-  Une correction dans un sous-dossier `correction/`
 
 ---
 
-## 🤝 Conventions & Bonnes pratiques Git
+##  Conventions & Bonnes pratiques Git
 
 ### Branches protégées
 
 | Branche | Protection | Règle |
-|---------|-----------|-------|
-| `main` / `master` | 🔒 **Stricte** | Merge via Pull Request uniquement, 1 reviewer minimum |
-| `dev` | 🔒 **Modérée** | Merge via Pull Request, CI verte obligatoire |
-| `feature/*` | ✅ Libre | Nommage obligatoire `feature/nom-explicite` |
+|---------|---------|-------|
+| `main` / `master` |  **Stricte** | Merge via Pull Request uniquement, 1 reviewer minimum |
+| `dev` |  **Modérée** | Merge via Pull Request, CI verte obligatoire |
+| `feature/*` | Libre | Nommage obligatoire `feature/nom-explicite` |
 
 ### Règles d'or
 1. **Ne jamais pusher directement** sur `main` ou `dev`
@@ -233,10 +235,4 @@ Chaque branche contient :
 
 ---
 
-## 📬 Support & Questions
-
-Pour toute question durant la formation, ouvrez une **Issue** sur ce dépôt en utilisant le template fourni, ou contactez votre formateur.
-
----
-
-*Bonne formation à tous ! 🚀*
+*Bonne formation à tous !*
