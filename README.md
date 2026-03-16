@@ -6,8 +6,8 @@ Objectif : apprendre les principes SOLID afin d'améliorer la qualité de code .
 
 ## Objectifs
 
-- Comprendre le principe SOLID `git status`
-- Savoir appliquer les principes sur un cas concret `git status`
+- Comprendre le principe SOLID `
+- Savoir appliquer les principes sur un cas concret 
 - Détecter le non respect des principes dans un code legacy
 
 ---
