@@ -80,7 +80,7 @@ def valider_dossier_sante(assure: dict, dossier: dict) -> list[str]:
     return erreurs
 
 
-# --- Vérification rapide ---
+# --- Vérification ---
 if __name__ == "__main__":
     assure_ok = {
         "piece_identite_valide": True,

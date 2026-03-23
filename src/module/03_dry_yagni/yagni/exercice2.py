@@ -48,7 +48,7 @@ class Sinistre:
         delai = (self.date_declaration - self.date_evenement).days
         return delai <= 5
 
-    # --- Méthodes anticipées jamais appelées dans le code ---
+    #  Méthodes anticipées jamais appelées dans le code
 
     def ajouter_photo(self, chemin: str) -> None:
         """Prévu pour un futur module de gestion de photos."""
@@ -104,7 +104,7 @@ class Sinistre:
         return score
 
 
-# --- Utilisation réelle dans le code métier ---
+
 if __name__ == "__main__":
     sinistre = Sinistre(
         numero="SIN-2024-042",

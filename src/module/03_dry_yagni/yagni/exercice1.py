@@ -64,14 +64,13 @@ class TarificationAuto(MoteurTarificationBase):
         return prime * (1 + taxes.get(region, 0.0))
 
 
-# --- Utilisation réelle dans le code métier ---
 if __name__ == "__main__":
     tarification = TarificationAuto()
 
     contrat = {"valeur_vehicule": 20_000}
     client = {"nom": "Dupont", "anciennete_ans": 6}
 
-    # Seules ces deux opérations sont réellement utilisées aujourd'hui
+    # Seules ces deux opérations sont réellement utilisées
     prime = tarification.calculer_prime(contrat)
     prime_finale = tarification.appliquer_remise(prime, client)
 

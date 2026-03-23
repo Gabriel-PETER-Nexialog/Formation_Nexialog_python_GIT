@@ -68,7 +68,7 @@ def generer_releve_sante(client: dict, contrats_sante: list[dict]) -> str:
     return "\n".join(lignes)
 
 
-# --- Vérification rapide ---
+# --- Vérification ---
 if __name__ == "__main__":
     client = {"nom": "Dupont", "prenom": "Marie", "adresse": "12 rue de Paris"}
 

@@ -72,7 +72,7 @@ def notifier_sinistre_courrier(sinistre: dict) -> str:
     return f"COURRIER à {adresse} : {message}"
 
 
-# --- Vérification rapide ---
+# --- Vérification ---
 if __name__ == "__main__":
     sinistre = {
         "numero": "SIN-2024-042",

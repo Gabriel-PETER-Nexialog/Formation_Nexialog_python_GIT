@@ -109,12 +109,11 @@ class ServiceGestionClient:
         self.repo.supprimer(client_id)
 
 
-# --- Utilisation réelle dans le code métier ---
 if __name__ == "__main__":
     repo = ClientRepositoryMemoire()
     service = ServiceGestionClient(repo)
 
-    # Seules ces opérations sont réellement utilisées aujourd'hui
+    # Seules ces opérations sont réellement utilisées
     client = service.inscrire_client("Dupont", "Marie", 35)
     print(f"Client inscrit : {client}")
 
