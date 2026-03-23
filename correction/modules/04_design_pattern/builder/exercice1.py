@@ -1,4 +1,4 @@
-"""Correction Exercice 1 — Builder : Construction d'un contrat auto (facile)"""
+"""Correction Exercice 1 — Builder : Construction d'un contrat auto """
 
 
 class ContratAuto:

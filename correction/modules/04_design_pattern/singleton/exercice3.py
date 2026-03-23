@@ -1,4 +1,4 @@
-"""Correction Exercice 3 — Singleton : Gestionnaire de connexion unique (difficile)"""
+"""Correction Exercice 3 — Singleton : Gestionnaire de connexion unique """
 
 
 class ConnexionTarification:

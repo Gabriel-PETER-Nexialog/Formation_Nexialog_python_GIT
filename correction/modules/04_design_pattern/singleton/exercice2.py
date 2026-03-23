@@ -1,4 +1,4 @@
-"""Correction Exercice 2 — Singleton : Registre central des contrats (moyen)"""
+"""Correction Exercice 2 — Singleton : Registre central des contrats """
 
 
 class RegistreContrats:

@@ -1,4 +1,4 @@
-"""Correction Exercice 2 — Builder : Construction d'une offre habitation (moyen)"""
+"""Correction Exercice 2 — Builder : Construction d'une offre habitation """
 
 
 class OffreHabitation:

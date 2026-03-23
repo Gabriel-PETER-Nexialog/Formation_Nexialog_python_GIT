@@ -1,4 +1,4 @@
-"""Correction Exercice 1 — Singleton : Configuration globale (facile)"""
+"""Correction Exercice 1 — Singleton : Configuration globale """
 
 
 class ConfigurationAssurance:

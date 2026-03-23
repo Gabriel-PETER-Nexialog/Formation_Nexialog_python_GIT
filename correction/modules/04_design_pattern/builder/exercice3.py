@@ -1,4 +1,4 @@
-"""Correction Exercice 3 — Builder : Construction d'un devis santé (difficile)"""
+"""Correction Exercice 3 — Builder : Construction d'un devis santé """
 
 
 class DevisSante:

@@ -1,4 +1,4 @@
-"""Correction Exercice 2 — Factory : Création de notifications par canal (moyen)"""
+"""Correction Exercice 2 — Factory : Création de notifications par canal """
 
 from abc import ABC, abstractmethod
 

@@ -1,4 +1,4 @@
-"""Correction Exercice 1 — Factory : Création de contrats par type (facile)"""
+"""Correction Exercice 1 — Factory : Création de contrats par type """
 
 from abc import ABC, abstractmethod
 
