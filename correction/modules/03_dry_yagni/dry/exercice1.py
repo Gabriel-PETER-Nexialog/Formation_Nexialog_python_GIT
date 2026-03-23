@@ -68,7 +68,7 @@ def valider_dossier(type_contrat: str, assure: dict, dossier: dict) -> list[str]
     erreurs.extend(verification_specifique(dossier))
     return erreurs
 
-
+# --- Vérification  ---
 if __name__ == "__main__":
     assure_ok = {
         "piece_identite_valide": True,

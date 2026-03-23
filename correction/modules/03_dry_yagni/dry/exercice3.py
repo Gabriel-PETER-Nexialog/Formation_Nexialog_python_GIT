@@ -44,7 +44,7 @@ def notifier_sinistre(sinistre: dict, canal: str) -> str:
     return f"{label} à {destinataire} : {message}"
 
 
-# --- Vérification rapide ---
+# --- Vérification  ---
 if __name__ == "__main__":
     sinistre = {
         "numero": "SIN-2024-042",
