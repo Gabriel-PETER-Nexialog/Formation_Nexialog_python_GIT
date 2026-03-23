@@ -1,4 +1,4 @@
-"""Exercice 1 — Factory : Création de contrats par type (facile)
+"""Exercice 1 — Factory : Création de contrats par type
 
 Complétez la classe ContratSante et ajoutez-la dans la Factory.
 """

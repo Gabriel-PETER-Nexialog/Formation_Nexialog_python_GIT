@@ -1,4 +1,4 @@
-"""Exercice 1 — Builder : Construction d'un contrat auto (facile)
+"""Exercice 1 — Builder : Construction d'un contrat auto
 
 Complétez les méthodes avec_franchise() et avec_option() du builder.
 """

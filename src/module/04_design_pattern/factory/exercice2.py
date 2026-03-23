@@ -1,4 +1,4 @@
-"""Exercice 2 — Factory : Création de notifications par canal (moyen)
+"""Exercice 2 — Factory : Création de notifications par canal
 
 Implémentez les classes NotificationEmail, NotificationSMS et NotificationCourrier.
 """

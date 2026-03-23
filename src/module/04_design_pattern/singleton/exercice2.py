@@ -1,4 +1,4 @@
-"""Exercice 2 — Singleton : Registre central des contrats (moyen)
+"""Exercice 2 — Singleton : Registre central des contrats
 
 Implémentez le pattern Singleton via __new__ et complétez les méthodes.
 """

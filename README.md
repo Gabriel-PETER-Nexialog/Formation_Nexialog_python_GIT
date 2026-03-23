@@ -202,9 +202,9 @@ Le pattern Singleton garantit qu'une classe n'a **qu'une seule instance** dans t
 Sans Singleton, on risque de créer plusieurs instances incohérentes :
 ```python
 config1 = Configuration()    # une instance
-config2 = Configuration()    # une autre instance !
+config2 = Configuration()    # une autre instance 
 config1.set("timeout", 30)
-print(config2.get("timeout"))  # None — les deux instances sont indépendantes
+print(config2.get("timeout"))  
 ```
 
 Avec le pattern Singleton, toutes les références pointent vers le même objet :
@@ -212,7 +212,7 @@ Avec le pattern Singleton, toutes les références pointent vers le même objet 
 config1 = Configuration()
 config2 = Configuration()
 config1.set("timeout", 30)
-print(config2.get("timeout"))  # 30 — c'est la même instance
+print(config2.get("timeout"))  # Le résultat est 30 car c'est la même instance
 ```
 
 Voici un exemple d'implémentation en Python avec `__new__` :
@@ -234,13 +234,12 @@ class ConfigurationAssurance:
         return self._parametres.get(cle, defaut)
 
 
-# Utilisation
 config_a = ConfigurationAssurance()
 config_a.set("franchise_defaut", 300)
 
 config_b = ConfigurationAssurance()
-print(config_b.get("franchise_defaut"))  # 300 — même instance
-print(config_a is config_b)             # True
+print(config_b.get("franchise_defaut")) 
+print(config_a is config_b)             
 ```
 
 ## Exercices
@@ -318,8 +317,7 @@ if __name__ == "__main__":
         .build()
     )
     print(contrat)
-    # Contrat tous_risques — Dupont (35 ans) — Renault Clio (15000€) —
-    # Franchise : 500€ — Options : ['assistance 0km', 'bris de glace']
+
 ```
 
 #### b) Exercice 2 : Construction d'une offre habitation 
@@ -341,8 +339,8 @@ class OffreHabitation:
         self.adresse = ""
         self.surface_m2 = 0.0
         self.nb_pieces = 0
-        self.type_bien = "appartement"   # "appartement" ou "maison"
-        self.formule = "essentielle"     # "essentielle", "confort", "premium"
+        self.type_bien = "appartement"  
+        self.formule = "essentielle"    
         self.garanties = []
         self.franchise = 250.0
 
@@ -410,8 +408,6 @@ if __name__ == "__main__":
         .build()
     )
     print(offre)
-    # Offre confort — Martin — appartement 85m² à 5 avenue des Champs, 75008 Paris —
-    # Prime : 386.75€/an — Garanties : ['dégât des eaux', 'vol']
 ```
 
 #### c) Exercice 3 : Construction d'un devis santé 

@@ -1,4 +1,4 @@
-"""Exercice 3 — Singleton : Gestionnaire de connexion unique (difficile)
+"""Exercice 3 — Singleton : Gestionnaire de connexion unique
 
 Créez entièrement la classe ConnexionTarification en tant que Singleton.
 """

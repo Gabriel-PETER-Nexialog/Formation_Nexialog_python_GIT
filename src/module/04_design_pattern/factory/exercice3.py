@@ -1,4 +1,4 @@
-"""Exercice 3 — Factory : Création de calculateurs de remise (difficile)
+"""Exercice 3 — Factory : Création de calculateurs de remise
 
 Créez entièrement les classes Remise, RemiseFidelite, RemiseMultiContrats,
 RemiseParrainage et RemiseFactory.

@@ -1,4 +1,4 @@
-"""Exercice 3 — Builder : Construction d'un devis santé (difficile)
+"""Exercice 3 — Builder : Construction d'un devis santé
 
 Créez entièrement la classe DevisSante et son DevisSanteBuilder.
 """

@@ -1,4 +1,4 @@
-"""Exercice 1 — Singleton : Configuration globale (facile)
+"""Exercice 1 — Singleton : Configuration globale
 
 Complétez la méthode __new__ pour que la classe ne crée qu'une seule instance.
 """

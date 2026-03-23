@@ -1,4 +1,4 @@
-"""Exercice 2 — Builder : Construction d'une offre habitation (moyen)
+"""Exercice 2 — Builder : Construction d'une offre habitation
 
 Implémentez toutes les méthodes du OffreHabitationBuilder.
 """
