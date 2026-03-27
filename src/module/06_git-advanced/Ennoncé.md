@@ -8,11 +8,10 @@ Vous êtes développeur dans une équipe qui travaille sur un système de gestio
 
 ## Étape 1 — Initialisation du dépôt
 
-1. Créez un nouveau dossier `assurance-projet` et initialisez un dépôt Git :
+1. Créez d'abord le dépôt **sur GitHub** (nom : `assurance-projet`), puis clonez-le en local :
    ```bash
-   mkdir assurance-projet
+   git clone <url-github> assurance-projet
    cd assurance-projet
-   git init
    ```
 
 2. Créez un fichier `README.md` avec le contenu suivant :
@@ -33,6 +32,7 @@ Vous êtes développeur dans une équipe qui travaille sur un système de gestio
    ```bash
    git add README.md .gitignore
    git commit -m "ADD : initialisation du projet avec README et .gitignore"
+   git push
    ```
 
 ---
@@ -42,6 +42,7 @@ Vous êtes développeur dans une équipe qui travaille sur un système de gestio
 1. Créez la branche `dev` à partir de `main` :
    ```bash
    git switch -C dev
+   git push -u origin dev
    ```
 
 2. Vérifiez que vous êtes bien sur `dev` :
@@ -57,7 +58,7 @@ Vous êtes développeur dans une équipe qui travaille sur un système de gestio
 
 1. Depuis `dev`, créez une branche pour ajouter le modèle Client :
    ```bash
-   git checkout -b feature/ajout-modele-client
+   git switch -c feature/ajout-modele-client
    ```
 
 2. Créez le fichier `client.py` :
@@ -92,6 +93,7 @@ Vous êtes développeur dans une équipe qui travaille sur un système de gestio
    ```bash
    git add client.py
    git commit -m "ADD : représentation textuelle du client"
+   git push -u origin feature/ajout-modele-client
    ```
 
 > Remarquez : **deux commits séparés** pour deux changements logiques distincts. C'est le principe du commit atomique.
@@ -102,8 +104,9 @@ Vous êtes développeur dans une équipe qui travaille sur un système de gestio
 
 1. Revenez sur `dev` et fusionnez votre feature :
    ```bash
-   git checkout dev
+   git switch dev
    git merge --no-ff feature/ajout-modele-client -m "MERGE : feature/ajout-modele-client → dev"
+   git push
    ```
 
    > L'option `--no-ff` force la création d'un commit de merge, ce qui garde la trace de la branche dans l'historique.
@@ -124,7 +127,7 @@ Vous êtes développeur dans une équipe qui travaille sur un système de gestio
 
 1. Depuis `dev`, créez une branche pour le service de contrat :
    ```bash
-   git checkout -b feature/service-contrat
+   git switch -c feature/service-contrat
    ```
 
 2. Créez le fichier `contrat.py` :
@@ -151,6 +154,7 @@ Vous êtes développeur dans une équipe qui travaille sur un système de gestio
    ```bash
    git add contrat.py
    git commit -m "ADD : modèle Contrat avec génération de numéro"
+   git push -u origin feature/service-contrat
    ```
 
 4. Créez le fichier `service_souscription.py` :
@@ -189,6 +193,7 @@ Vous êtes développeur dans une équipe qui travaille sur un système de gestio
    ```bash
    git add service_souscription.py
    git commit -m "ADD : service de souscription avec calcul de prime et remise fidélité"
+   git push
    ```
 
 ---
@@ -197,12 +202,12 @@ Vous êtes développeur dans une équipe qui travaille sur un système de gestio
 
 1. **Sans fusionner** `feature/service-contrat`, revenez sur `dev` :
    ```bash
-   git checkout dev
+   git switch dev
    ```
 
 2. Créez une branche de documentation :
    ```bash
-   git checkout -b docs/mise-a-jour-readme
+   git switch -c docs/mise-a-jour-readme
    ```
 
 3. Modifiez `README.md` pour ajouter une section :
@@ -218,24 +223,28 @@ Vous êtes développeur dans une équipe qui travaille sur un système de gestio
    ```bash
    git add README.md
    git commit -m "UPDATE : ajout de la section Modules au README"
+   git push -u origin docs/mise-a-jour-readme
    ```
 
 5. Fusionnez dans `dev` :
    ```bash
-   git checkout dev
+   git switch dev
    git merge --no-ff docs/mise-a-jour-readme -m "MERGE : docs/mise-a-jour-readme → dev"
+   git push
    git branch -d docs/mise-a-jour-readme
    ```
 
 6. Maintenant, fusionnez `feature/service-contrat` dans `dev` :
    ```bash
    git merge --no-ff feature/service-contrat -m "MERGE : feature/service-contrat → dev"
+   git push
    ```
 
    > Si un conflit apparaît (par exemple sur `README.md`), résolvez-le manuellement, puis :
    ```bash
    git add .
    git commit -m "FIX : résolution du conflit de merge sur README.md"
+   git push
    ```
 
 7. Supprimez la branche :
@@ -249,7 +258,7 @@ Vous êtes développeur dans une équipe qui travaille sur un système de gestio
 
 1. Depuis `dev`, créez une branche de tests :
    ```bash
-   git checkout -b tests/couverture-client
+   git switch -c tests/couverture-client
    ```
 
 2. Créez le fichier `test_client.py` :
@@ -280,12 +289,14 @@ Vous êtes développeur dans une équipe qui travaille sur un système de gestio
    ```bash
    git add test_client.py
    git commit -m "ADD : tests unitaires pour le modèle Client"
+   git push -u origin tests/couverture-client
    ```
 
 4. Fusionnez dans `dev` :
    ```bash
-   git checkout dev
+   git switch dev
    git merge --no-ff tests/couverture-client -m "MERGE : tests/couverture-client → dev"
+   git push
    git branch -d tests/couverture-client
    ```
 
@@ -295,7 +306,7 @@ Vous êtes développeur dans une équipe qui travaille sur un système de gestio
 
 1. Depuis `dev`, créez une branche bugfix :
    ```bash
-   git checkout -b bugfix/validation-type-contrat
+   git switch -c bugfix/validation-type-contrat
    ```
 
 2. Modifiez `service_souscription.py` — ajoutez une validation dans la méthode `souscrire` :
@@ -315,12 +326,14 @@ Vous êtes développeur dans une équipe qui travaille sur un système de gestio
    ```bash
    git add service_souscription.py
    git commit -m "FIX : ajout validation valeur positive dans souscription"
+   git push -u origin bugfix/validation-type-contrat
    ```
 
 4. Fusionnez dans `dev` :
    ```bash
-   git checkout dev
+   git switch dev
    git merge --no-ff bugfix/validation-type-contrat -m "MERGE : bugfix/validation-type-contrat → dev"
+   git push
    git branch -d bugfix/validation-type-contrat
    ```
 
@@ -330,7 +343,7 @@ Vous êtes développeur dans une équipe qui travaille sur un système de gestio
 
 1. Depuis `dev`, créez une branche de release :
    ```bash
-   git checkout -b release/v1.0.0
+   git switch -c release/v1.0.0
    ```
 
 2. Mettez à jour `README.md` avec la version finale :
@@ -351,23 +364,27 @@ Vous êtes développeur dans une équipe qui travaille sur un système de gestio
    ```bash
    git add README.md
    git commit -m "UPDATE : README pour la release v1.0.0"
+   git push -u origin release/v1.0.0
    ```
 
 4. Fusionnez dans `main` :
    ```bash
-   git checkout main
+   git switch main
    git merge --no-ff release/v1.0.0 -m "MERGE : release/v1.0.0 → main"
+   git push
    ```
 
 5. Créez un tag de version :
    ```bash
    git tag -a v1.0.0 -m "Version 1.0.0 — Première release"
+   git push --tags
    ```
 
 6. Fusionnez aussi dans `dev` pour synchroniser :
    ```bash
-   git checkout dev
+   git switch dev
    git merge main -m "MERGE : synchronisation dev avec main après release v1.0.0"
+   git push
    ```
 
 7. Supprimez la branche de release :
