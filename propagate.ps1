@@ -1,3 +1,8 @@
+param(
+  [ValidateSet("ours", "theirs", "")]
+  [string]$Strategy = ""
+)
+ 
 $branches = @(
   "main",
   "module/00-introduction",
@@ -9,19 +14,24 @@ $branches = @(
   "module/06-git-advanced",
   "module/07-coding-with-ia"
 )
-
+ 
 for ($i = 1; $i -lt $branches.Length; $i++) {
   $parent = $branches[$i - 1]
   $current = $branches[$i]
-
+ 
   Write-Host "Rebasing $current onto $parent..."
   git switch $current
-  git rebase $parent
-
+ 
+  if ($Strategy -ne "") {
+    git rebase -X $Strategy $parent
+  } else {
+    git rebase $parent
+  }
+ 
   if ($LASTEXITCODE -ne 0) {
     Write-Host "Conflict on $current -- stopping. Resolve then run git rebase --continue"
     exit 1
   }
 }
-
+ 
 Write-Host "All branches updated!"
