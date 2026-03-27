@@ -124,9 +124,9 @@ pour plus de détails visiter ce site : [**git-cheat-sheet**](https://git-scm.co
 
 Avant de commencer, assurez-vous d'avoir installé :
 
--  **Python Install Manager** (Microsoft Store) : https://apps.microsoft.com/detail/9NQ7512CXL7T?hl=neutral&gl=FR&ocid=pdpshare
--  [**Git**](https://git-scm.com/downloads) (2.x ou supérieur)
--  Un terminal (PowerShell ou bash)
+- [Python Install Manager (Microsoft Store)](https://apps.microsoft.com/detail/9nq7512cxl7t?hl=fr-fr&gl=FR&ocid=pdpshare)
+- [Git](https://git-scm.com/downloads) (2.x ou supérieur)
+- Un terminal (PowerShell ou bash)
 
 Vérifiez vos installations :
 ```bash
