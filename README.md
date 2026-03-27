@@ -14,8 +14,8 @@ Bienvenue dans le premier module de la formation. L'objectif est de valider l'en
 
 ## Prerequis
 
-- Avoir exécuté `conda_init.bat` (Windows) ou `conda_init.sh` (Linux/macOS)
-- Avoir active l'environnement `formation_env`
+- Avoir installé Python via **Python Install Manager** (Microsoft Store)
+- Avoir créé et activé l'environnement virtuel `.venv`
 
 Vérification rapide :
 ```bash
