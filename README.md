@@ -124,13 +124,13 @@ pour plus de détails visiter ce site : [**git-cheat-sheet**](https://git-scm.co
 
 Avant de commencer, assurez-vous d'avoir installé :
 
--  [**Anaconda**](https://www.anaconda.com/download) (dernière version)
+-  **Python Install Manager** (Microsoft Store) : https://apps.microsoft.com/detail/9NQ7512CXL7T?hl=neutral&gl=FR&ocid=pdpshare
 -  [**Git**](https://git-scm.com/downloads) (2.x ou supérieur)
--  Un terminal (PowerShell, bash ou le terminal Anaconda)
+-  Un terminal (PowerShell ou bash)
 
 Vérifiez vos installations :
 ```bash
-conda --version
+py --version
 git --version
 ```
 
@@ -144,37 +144,32 @@ git clone https://github.com/<organisation>/formation-python-git.git
 cd formation-python-git
 ```
 
-**2. Lancez le script d'initialisation**
-
->  **Windows** — Double-cliquez sur le fichier ou exécutez dans un terminal :
+**2. Créez l'environnement virtuel**
 ```bash
-conda_init.bat
+py -m venv .venv
 ```
-
-> **Linux / macOS**
-```bash
-bash conda_init.sh
-```
-
-
-> Dans l'invite de commande mettez le noms de l'environnement conda `formation_env` puis choissiez la version de python **Python 3.13**
-
-Le script va automatiquement :
-- Installer toutes les dépendances nécessaires (`pytest`, `behave`, etc.)
-- Vérifier que l'environnement est prêt
-
-> ⚠️ **Important** : Vous devez nommer votre environnement **`formation_env`** — le script le vérifie automatiquement.
 
 **3. Activez l'environnement**
+
+> **PowerShell (Windows)**
 ```bash
-conda activate formation_env
+.\.venv\Scripts\Activate.ps1
 ```
 
-**4. Vérifiez que tout est opérationnel**
+> **Bash (Linux / macOS / Git Bash)**
 ```bash
-python --version    # doit afficher Python 3.13.x
-pytest --version
-behave --version
+source .venv/bin/activate
+```
+
+**4. Installez les dépendances**
+```bash
+py -m pip install -r requirements.txt
+```
+
+**5. Vérifiez que tout est opérationnel**
+```bash
+py --version
+py -m pytest --version
 ```
 
 ---
